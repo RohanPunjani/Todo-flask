@@ -5,8 +5,34 @@
     border-radius: 0;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #3f3d56;
+}
+
 .jumbotron.bg-dark.text-white {
     border-radius: 0;
+    z-index: 0;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #3f3d56
+}
+
+.btn-secondary:hover {
+    background: #3f3d56;
+    border: 1px solid white
+}
+
+.bg-dark {
+    background: #3f3d56 !important;
+}
+
+.illustration {
+    position: absolute;
+    left: -200px
 }
 
 .table {

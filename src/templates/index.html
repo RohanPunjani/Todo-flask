@@ -3,6 +3,7 @@
 {% block body %}
 
 <div class="jumbotron bg-dark text-white">
+    <img src="{{ url_for('static', filename='images/img1.svg') }}" class="illustration i1" alt="" height="600">
     <div class="container">
         <center>
             <h1>Task Master</h1>
@@ -11,7 +12,8 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-1"></div>
                     <div class="form-group col-sm-9 col-md-3">
-                        <input id="content" class="form-control bg-dark text-white" type="text" name="content">
+                        <input id="content" class="form-control bg-dark text-white" type="text" name="content"
+                            placeholder="Enter a new task here . . .">
                     </div>
                     <div class="col-sm-3 col-md-1">
                         <input type="Submit" value="Add Task" class="btn btn-secondary">
@@ -19,7 +21,7 @@
                 </div>
             </form>
             <br>
-            <table class="table table-bordered text-white">
+            <table class="table table-borderless text-white">
                 <tr>
                     <th>Task</th>
                     <th>Added</th>
