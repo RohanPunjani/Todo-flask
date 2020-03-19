@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.jumbotron.bg-dark.text-white {
+    border-radius: 0;
+}
+
+.table {
+    max-width: 500px;
+}
+
+a i {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+}
+
+a i:hover {
+    color: rgba(255, 255, 255, 1);
+}

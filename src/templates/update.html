@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="jumbotron">
+    <div class="container">
+        <center>
+            <h1>Task Master</h1>
+        </center>
+        <form action="/update/{{ task.id }}" method="POST">
+            <div class="form-group">
+                <label for="UpdateTask">Update Task</label>
+                <input id="UpdateTask" class="form-control" type="text" name="content" value="{{ task.content }}">
+            </div>
+            <input type="submit" value="Update" class="btn btn-secondary">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
