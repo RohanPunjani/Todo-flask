@@ -16,6 +16,16 @@ body {
     z-index: 0;
 }
 
+.head {
+    padding: 1px;
+    background-color: white;
+    width: 48%;
+}
+
+h5 {
+    color: #3F3D56;
+}
+
 .btn-secondary {
     background: rgba(255, 255, 255, 0.9);
     color: #3f3d56
