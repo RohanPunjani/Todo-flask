@@ -20,24 +20,61 @@
                     </div>
                 </div>
             </form>
-            <br>
+            <div class="head">
+                <h5>Pending</h5>
+            </div>
+            
             <table class="table table-borderless text-white">
                 <tr>
                     <th>Task</th>
                     <th>Added</th>
                     <th>Action</th>
                 </tr>
-                {% for task in tasks %}
+                {% for task in taskspending %}
                 <tr>
                     <td>{{ task.content }}</td>
                     <td>{{ task.date_created.date() }}</td>
                     <td>
+                        <a href="/markasdone/{{ task.id }}">
+                            <i class="fas fa-check"></i>
+                        </a>
                         <a href="/delete/{{ task.id }}">
                             <i class="fas fa-trash"></i>
                         </a>
                         <a href="/update/{{ task.id }}">
                             <i class="fas fa-edit"></i>
                         </a>
+                        
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            <div class="head">
+                <h5>Completed</h5>
+            </div>
+            <table class="table table-borderless text-white">
+                <tr>
+                    <th>Task</th>
+                    <th>Added</th>
+                    <th>Action</th>
+                </tr>
+                {% for task in taskscompleted %}
+                <tr>
+                  
+                    <td><strike>{{ task.content }}</strike></td>
+                    <td><strike>{{ task.date_created.date() }}</strike></td>
+              
+                    <td>
+                        <a href="/markasundone/{{ task.id }}">
+                            <i class="fas fa-times"></i>
+                        </a>
+                        <a href="/delete/{{ task.id }}">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                        <a href="/update/{{ task.id }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        
                     </td>
                 </tr>
                 {% endfor %}
